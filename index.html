@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokédex Fetch</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body id="body">
+  <header class="bg-neutral-700">
+      <img src="/assets/logo.png" class="flex w-70 h-30 justify-center mx-auto pt-5">
+      <div class="grid grid-cols-7 justify-items-center mx-auto">
+        <img src="/assets/rattata.png" class="w-30 h-30">
+        <img src="/assets/charmander.png" class="w-30 h-30">
+        <img src="/assets/pikachu.png" class="w-30 h-30">
+        <h1 class="font-inter font-bold text-center text-2xl text-white p-3">Pokédex</h1>
+        <img src="/assets/bulbasaur.png" class="w-30 h-30">
+        <img src="/assets/squirtle.png" class="w-30 h-30">
+        <img src="/assets/pidgey.png" class="w-30 h-30">
+      </div>
+      
+  </header>
+  
+  <div class="bg-gray-200 border-neutral-700 border-60 pd-5 flex-grow">
+    <h2 class="text-center font-inter font-bold p-3 text-black text-2xl">Enter a Pokemon Here!</h2>
+    <form id="search-form" class="flex justify-center mt-10">
+      <input id="search-input" placeholder="Name or ID (e.g. pikachu, 25)" class="border-2 border-white p-2 placeholder-gray-600 bg-gray-100">
+      <button type="submit" class="flex border-2 p-2 text-white font-inter bg-red-600">Search</button>
+    </form>
+    <h1 id="error" class="text-center font-inter font-bold p-3 text-zinc-600 text-2xl hide2">There seems to be a problem here....</h1>
+
+    <p id="status"></p>
+    <div id="pokemon-card" class="grid grid-cols-2 gap-5 justify-center items-center mt-7 font-inter font-semibold text-zinc-600 card hide">
+      <div class="flex flex-col items-center p-3">
+        <img id="img" class="h-30 w-30">
+        <h1 id="pokeName"  class="text-3xl text-black p-2"></h1>
+        <div class="bg-rose-600 text-white p-3 rounded-xl">
+          <p id="pId"></p>
+          <p id="height"></p>
+          <p id="weight"></p>
+          <p id="types"></p>
+          <p id="abilities" class=""></p>
+        </div>
+      </div>
+      
+      <div class="flex flex-col items-center">
+        <h2 class="font-inter fond-bold text-3xl text-black p-3">Base Stats</h2>
+        <ul class="p-2 border-black border-1 bg-sky-500 rounded-xl text-white p-5">
+          <li id="baseHP"></li>
+          <li id="baseATK"></li>
+          <li id="baseDEF"></li>
+          <li id="baseSPATK"></li>
+          <li id="baseSPDEF"></li>
+          <li id="baseSpeed"></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="grid grid-cols-7 mx-auto justify-items-center bg-neutral-700 pb-7">
+    <img src="/assets/premierball.webp" class="w-30 h-30">
+    <img src="/assets/diveball.png" class="w-30 h-30">
+    <img src="/assets/greatball.png" class="w-30 h-30">
+    <img src="/assets/pokeball.png" class="w-30 h-30">
+    <img src="/assets/ultraball.webp" class="w-30 h-30">
+    <img src="/assets/masterball.webp" class="w-30 h-30">
+    <img src="/assets/safariball.webp" class="w-30 h-30">
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
